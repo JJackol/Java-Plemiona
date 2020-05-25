@@ -1,0 +1,1 @@
+{"timestamp":"2020-05-25T17:17:07.858+0000","status":500,"error":"Internal Server Error","message":"Optional long parameter 'playerid' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.","path":"/api/building/"}
