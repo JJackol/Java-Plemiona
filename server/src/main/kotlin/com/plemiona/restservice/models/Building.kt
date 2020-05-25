@@ -7,9 +7,9 @@ import javax.persistence.*
 data class Building (
         @ManyToOne(fetch = FetchType.EAGER)
         @JoinColumn(name = "village_id")
-        val village: Village,
-        val type: String,
-        var level: Int,
+        val village: Village? = null,
+        val type: String = "",
+        var level: Int = 1,
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         var id: Long = 0
 )

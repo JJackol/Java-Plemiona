@@ -23,11 +23,16 @@ class VillageController(private val villageRepository: VillageRepository,
 
     @PostMapping("/")
     @ResponseStatus(HttpStatus.CREATED)
-    fun savePlayerVillage(id: Long, villageName: String): String {
-        var player = playerRepository.findByIdOrNull(id)
-        var village = Village(0, name = villageName, player = player)
-        villageRepository.save(village)
-        return "village created"
+    fun savePlayerVillage(playerid: Long, villageName: String): String {
+        var player = playerRepository.findByIdOrNull(playerid)
+        return if (player != null)
+        {
+            var village = Village(0, name = villageName, player = player)
+            villageRepository.save(village)
+            "village created"
+        } else {
+            "no player found"
+        }
     }
 
 }
