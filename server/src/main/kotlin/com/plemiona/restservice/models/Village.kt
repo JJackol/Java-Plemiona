@@ -9,8 +9,8 @@ import javax.persistence.*
 data class Village(
         var points: Int = 0,
         var name: String = "",
-        val resources: Int = 0,
-        val soldiers: Int = 0,
+        var resources: Int = 0,
+        var soldiers: Int = 0,
         @ManyToOne(fetch = FetchType.EAGER)
         @JoinColumn(name = "player_id")
         @JsonBackReference
