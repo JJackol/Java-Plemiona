@@ -27,7 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f0444535-a31d-4ada-857a-4aa469891e05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/BuildingController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/BuildingController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/VillageController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/VillageController.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -110,7 +110,8 @@
       <workItem from="1590435884927" duration="661000" />
       <workItem from="1590528105912" duration="140000" />
       <workItem from="1591218477248" duration="1464000" />
-      <workItem from="1591286232191" duration="525000" />
+      <workItem from="1591286232191" duration="905000" />
+      <workItem from="1591302726745" duration="787000" />
     </task>
     <servers />
   </component>
