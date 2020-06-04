@@ -27,7 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f0444535-a31d-4ada-857a-4aa469891e05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/VillageController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/VillageController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/ResourceController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/ResourceController.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +54,8 @@
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="636" />
-    <property name="RequestMappingsPanelWidth1" value="636" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -111,7 +111,7 @@
       <workItem from="1590528105912" duration="140000" />
       <workItem from="1591218477248" duration="1464000" />
       <workItem from="1591286232191" duration="905000" />
-      <workItem from="1591302726745" duration="787000" />
+      <workItem from="1591302726745" duration="1647000" />
     </task>
     <servers />
   </component>
@@ -135,37 +135,37 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590431453307" />
-    <state width="1340" height="266" key="GridCell.Tab.0.bottom" timestamp="1590433943472">
+    <state width="1340" height="266" key="GridCell.Tab.0.bottom" timestamp="1591304390599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590433943472" />
-    <state width="1340" height="266" key="GridCell.Tab.0.center" timestamp="1590433943470">
+    <state width="1340" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390599" />
+    <state width="1340" height="266" key="GridCell.Tab.0.center" timestamp="1591304390598">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590433943470" />
-    <state width="1340" height="266" key="GridCell.Tab.0.left" timestamp="1590433943470">
+    <state width="1340" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390598" />
+    <state width="1340" height="266" key="GridCell.Tab.0.left" timestamp="1591304390598">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590433943470" />
-    <state width="1340" height="266" key="GridCell.Tab.0.right" timestamp="1590433943471">
+    <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390598" />
+    <state width="1340" height="266" key="GridCell.Tab.0.right" timestamp="1591304390599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590433943471" />
-    <state width="1340" height="266" key="GridCell.Tab.1.bottom" timestamp="1590433943474">
+    <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390599" />
+    <state width="1340" height="266" key="GridCell.Tab.1.bottom" timestamp="1591304390600">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590433943474" />
-    <state width="1340" height="266" key="GridCell.Tab.1.center" timestamp="1590433943473">
+    <state width="1340" height="266" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390600" />
+    <state width="1340" height="266" key="GridCell.Tab.1.center" timestamp="1591304390599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590433943473" />
-    <state width="1340" height="266" key="GridCell.Tab.1.left" timestamp="1590433943472">
+    <state width="1340" height="266" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390599" />
+    <state width="1340" height="266" key="GridCell.Tab.1.left" timestamp="1591304390599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590433943472" />
-    <state width="1340" height="266" key="GridCell.Tab.1.right" timestamp="1590433943473">
+    <state width="1340" height="266" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390599" />
+    <state width="1340" height="266" key="GridCell.Tab.1.right" timestamp="1591304390600">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590433943473" />
+    <state width="1340" height="266" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390600" />
   </component>
 </project>
