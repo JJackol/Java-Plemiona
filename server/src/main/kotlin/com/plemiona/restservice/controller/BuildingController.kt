@@ -23,8 +23,13 @@ class BuildingController(private val villageRepository: VillageRepository,
         var player = playerRepository.findByIdOrNull(id = playerid)
         return if (player != null) {
             var village = player.village[0]
-            var building = Building(village = village, type = type)
-            "built"
+            return if (village.resources < 1000) {
+                var building = Building(village = village, type = type)
+                buildingRepository.save(building)
+                "built"
+            } else {
+                "not enough resources"
+            }
         } else {
             "player not found"
         }
@@ -37,9 +42,13 @@ class BuildingController(private val villageRepository: VillageRepository,
             var village = player.village[0]
             var building = village.buildings.find { building -> building.id == buildingid }
             if (building != null) {
-                upgradeBuilding(village, building)
+                if (village.resources < building.upgradeCost){
+                        upgradeBuilding(village, building)
+                } else {
+                    "not enough resources"
+                }
             }
-            "built"
+            "upgraded"
         } else {
             "not found"
         }
