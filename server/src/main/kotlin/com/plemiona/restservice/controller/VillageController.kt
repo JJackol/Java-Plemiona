@@ -24,6 +24,11 @@ class VillageController(private val villageRepository: VillageRepository,
     fun findOne(@PathVariable id: Long) =
             villageRepository.findByIdOrNull(id) ?: ResponseStatusException(HttpStatus.NOT_FOUND, "This village does not exist")
 
+    @GetMapping("/playerVillages/")
+    fun findPlayerVillages(playerid: Long) =
+            villageRepository.findAll().find { village -> village.player == playerRepository.findByIdOrNull(playerid) }
+                    ?: ResponseStatusException(HttpStatus.NOT_FOUND, "This player has no villages or doesnt exist")
+
     @GetMapping("attack/{id}")
     fun attackVillage(@PathVariable id: Long, playerid: Long, villageid: Long, armySize: Int): BattleReport {
         var defenderVillage = villageRepository.findById(id).get()
@@ -46,11 +51,6 @@ class VillageController(private val villageRepository: VillageRepository,
 
         return battleReport
     }
-
-
-
-
-
 
 
     @PostMapping("/")

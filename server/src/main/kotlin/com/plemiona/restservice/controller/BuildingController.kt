@@ -1,7 +1,7 @@
 package com.plemiona.restservice.controller
 
 import com.plemiona.restservice.models.Building
-import com.plemiona.restservice.models.Player
+import com.plemiona.restservice.models.BuildingType
 import com.plemiona.restservice.models.Village
 import com.plemiona.restservice.repos.BuildingRepository
 import com.plemiona.restservice.repos.PlayerRepository
@@ -19,12 +19,12 @@ class BuildingController(private val villageRepository: VillageRepository,
                         private val buildingRepository: BuildingRepository) {
 
     @PostMapping("/build")
-    fun buildBuilding(playerid: Long, villageid: Long, type: String): String {
+    fun buildBuilding(playerid: Long, villageid: Long, buildingType: String): String {
         var player = playerRepository.findByIdOrNull(id = playerid)
         return if (player != null) {
             var village = player.village[0]
-            return if (village.resources < 1000) {
-                var building = Building(village = village, type = type)
+            var building = Building(village = village, type = BuildingType.from(buildingType))
+            return if (village.resources > building.upgradeCost) {
                 buildingRepository.save(building)
                 "built"
             } else {
