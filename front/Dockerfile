@@ -7,4 +7,4 @@ RUN mkdir app
 COPY . /app
 WORKDIR /app
 
-EXPOSE 8080
+EXPOSE 8000

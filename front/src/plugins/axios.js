@@ -3,16 +3,16 @@ import axios from "axios";
 
 // Full config:  https://github.com/axios/axios#request-config
 axios.defaults.baseURL =
-  process.env.baseURL || process.env.apiUrl || "http://localhost:8000";
+  process.env.baseURL || process.env.apiUrl || "http://localhost:8080";
 
-const AUTH_TOKEN = localStorage.getItem("authorization_token");
-if (AUTH_TOKEN) {
-  axios.defaults.headers.common.Authorization = `Token ${AUTH_TOKEN}`;
-}
-axios.defaults.headers.post["Content-Type"] = "application/json";
+// const AUTH_TOKEN = localStorage.getItem("authorization_token");
+// if (AUTH_TOKEN) {
+//   axios.defaults.headers.common.Authorization = `Token ${AUTH_TOKEN}`;
+// }
+// axios.defaults.headers.post["Content-Type"] = "application/json";
 
 let config = {
-  baseURL: process.env.baseURL || process.env.apiUrl || "http://localhost:8000"
+  baseURL: process.env.baseURL || process.env.apiUrl || "http://localhost:8080"
   // timeout: 60 * 1000, // Timeout
   // withCredentials: true, // Check cross-site Access-Control
 };

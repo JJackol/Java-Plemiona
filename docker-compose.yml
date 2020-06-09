@@ -25,11 +25,11 @@ services:
     build:
       context: ./front
     ports:
-      - "8080:8080"
+      - "8000:8000"
     volumes:
       - ./front:/app
     working_dir: /app
     tty: true
-    command: yarn serve
+    command: yarn serve --port 8000
 
 

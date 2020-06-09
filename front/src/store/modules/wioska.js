@@ -17,12 +17,10 @@ const context = {
     async fetchWioska({ commit }, payload) {
       return new Promise((resolve, reject) => {
         axios
-          .post("/api/login_auth/", { ...payload })
+          .post("/api/village/", { ...payload })
           .then(response => {
             if (response.status === 200) {
-              localStorage.setItem("authorization_token", response.data.token);
               commit("setAuthorizationToken", response.data);
-              axios.defaults.headers.common.Authorization = `Token ${response.data.token}`;
               resolve();
             } else {
               reject();

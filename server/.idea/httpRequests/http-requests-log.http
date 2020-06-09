@@ -1,3 +1,53 @@
+GET https://localhost:8080/api/savePlayer/
+
+###
+
+GET http://localhost/api/user/
+
+###
+
+GET https://localhost/api/village/
+Accept: application/json
+
+###
+
+GET http://localhost/api/user/
+
+###
+
+GET https://localhost/api/village/
+Accept: application/json
+
+###
+
+GET https://localhost/api/village/
+Accept: application/json
+
+###
+
+GET https://localhost:8080/api/village/
+Accept: application/json
+Method: GET
+
+###
+
+GET https://localhost:8080/api/village/
+Accept: application/json
+
+###
+
+GET https://localhost:8080/api/village/
+
+###
+
+GET http://localhost/api/village/
+
+###
+
+GET https://localhost:8080/api/village/
+
+###
+
 GET http://localhost:8080/api/building/
 
 <> 2020-05-25T071707.500.json
