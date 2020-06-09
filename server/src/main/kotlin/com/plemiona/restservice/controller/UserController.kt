@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/api/userr")
 class UserController (private val playerRepository: PlayerRepository) {
+
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
     fun registerUser (username: String, password: String, email: String) :String{
@@ -22,6 +23,23 @@ class UserController (private val playerRepository: PlayerRepository) {
         }
         else {
             "User already exist"
+        }
+    }
+
+    @PostMapping("/login")
+    @ResponseStatus(HttpStatus.OK)
+    fun loginUser (username: String, password: String) :String{
+        var user = playerRepository.findByUsername(username)
+        return if (user != null){
+            if (user.passwordSalt == password){
+                "Welcome"
+            }
+            else{
+                "Wrong password"
+            }
+        }
+        else{
+            "Wrong username"
         }
     }
 }
