@@ -1,9 +1,11 @@
 package com.plemiona.restservice.controller;
 
 import com.plemiona.restservice.models.BattleReport
+import com.plemiona.restservice.models.Building
 import com.plemiona.restservice.models.Player
 import com.plemiona.restservice.models.Village
 import com.plemiona.restservice.repos.BattleReportRepository
+import com.plemiona.restservice.repos.BuildingRepository
 import com.plemiona.restservice.repos.PlayerRepository
 import com.plemiona.restservice.repos.VillageRepository;
 import org.springframework.data.repository.findByIdOrNull
@@ -15,6 +17,7 @@ import org.springframework.web.server.ResponseStatusException
 @RequestMapping("/api/village")
 class VillageController(private val villageRepository: VillageRepository,
                         private val playerRepository: PlayerRepository,
+                        private val buildingRepository: BuildingRepository,
                         private val battleReportRepository: BattleReportRepository) {
 
     @GetMapping("/")
@@ -53,14 +56,16 @@ class VillageController(private val villageRepository: VillageRepository,
     }
 
 
-    @PostMapping("/")
+    @PostMapping("/{id}")
     @ResponseStatus(HttpStatus.CREATED)
-    fun savePlayerVillage(playerid: Long, villageName: String): String {
-        var player = playerRepository.findByIdOrNull(playerid)
+    fun savePlayerVillage(@PathVariable id: Long, villageName: String): String {
+        val player = playerRepository.findById(id).get()
         return if (player != null)
         {
-            var village = Village(0, name = villageName, player = player)
+            var village = Village(name = villageName, player = player)
             villageRepository.save(village)
+            val building = Building(village = village)
+            buildingRepository.save(building)
             "village created"
         } else {
             "no player found"

@@ -1,3 +1,63 @@
+GET http://localhost:8080/api/village/
+
+<> 2020-06-09T102341.200.json
+
+###
+
+GET http://localhost:8080/api/village/
+
+<> 2020-06-09T102303.200.json
+
+###
+
+GET http://localhost:8080/api/user/
+
+<> 2020-06-09T101826.200.json
+
+###
+
+GET http://localhost:8080/api/village/
+
+<> 2020-06-09T101812.200.json
+
+###
+
+GET http://localhost:8080/api/village/
+
+<> 2020-06-09T101235.200.json
+
+###
+
+GET http://localhost:8080/api/village/
+
+<> 2020-06-09T101005.200.json
+
+###
+
+GET http://localhost:8080/api/user/
+
+<> 2020-06-09T100519.200.json
+
+###
+
+GET http://localhost:8080/api/user/
+
+<> 2020-06-09T100455.200.json
+
+###
+
+GET http://localhost:8080/api/village/
+
+<> 2020-06-09T100006.200.json
+
+###
+
+GET http://localhost:8080/api/user/
+
+<> 2020-06-09T091803.200.json
+
+###
+
 GET http://localhost:8080/api/building/
 
 <> 2020-05-25T071707.500.json

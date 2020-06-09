@@ -26,10 +26,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0444535-a31d-4ada-857a-4aa469891e05" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/BuildingController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/BuildingController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/VillageController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/VillageController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/models/Building.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/models/Building.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/models/Village.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/models/Village.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,20 @@
       <list>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/user/" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/village/" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8080/api/building/" />
           <option name="urlPath" value="" />
           <option name="textToSend" value="" />
@@ -77,7 +91,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.RestServiceApplication">
+    <configuration name="RestServiceApplication#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="RestServiceApplication#13" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="13" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="RestServiceApplication#7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="7" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="RestServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -89,6 +109,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.RestServiceApplication#7" />
+        <item itemvalue="HTTP Request.RestServiceApplication#1" />
         <item itemvalue="HTTP Request.RestServiceApplication#13" />
       </list>
     </recent_temporary>
@@ -115,7 +137,10 @@
       <workItem from="1591286232191" duration="905000" />
       <workItem from="1591302726745" duration="1647000" />
       <workItem from="1591313098037" duration="307000" />
-      <workItem from="1591355461431" duration="3356000" />
+      <workItem from="1591355461431" duration="3501000" />
+      <workItem from="1591635529283" duration="14000" />
+      <workItem from="1591730053086" duration="247000" />
+      <workItem from="1591732497348" duration="1534000" />
     </task>
     <servers />
   </component>
@@ -139,37 +164,41 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590431453307" />
-    <state width="1340" height="266" key="GridCell.Tab.0.bottom" timestamp="1591304390599">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1591734009376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390599" />
-    <state width="1340" height="266" key="GridCell.Tab.0.center" timestamp="1591304390598">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591734009376" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1591734009376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390598" />
-    <state width="1340" height="266" key="GridCell.Tab.0.left" timestamp="1591304390598">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591734009376" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1591734009376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390598" />
-    <state width="1340" height="266" key="GridCell.Tab.0.right" timestamp="1591304390599">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591734009376" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1591734009376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390599" />
-    <state width="1340" height="266" key="GridCell.Tab.1.bottom" timestamp="1591304390600">
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591734009376" />
+    <state width="1877" height="281" key="GridCell.Tab.1.bottom" timestamp="1591734009377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390600" />
-    <state width="1340" height="266" key="GridCell.Tab.1.center" timestamp="1591304390599">
+    <state width="1877" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591734009377" />
+    <state width="1877" height="281" key="GridCell.Tab.1.center" timestamp="1591734009377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390599" />
-    <state width="1340" height="266" key="GridCell.Tab.1.left" timestamp="1591304390599">
+    <state width="1877" height="281" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591734009377" />
+    <state width="1877" height="281" key="GridCell.Tab.1.left" timestamp="1591734009377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390599" />
-    <state width="1340" height="266" key="GridCell.Tab.1.right" timestamp="1591304390600">
+    <state width="1877" height="281" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591734009377" />
+    <state width="1877" height="281" key="GridCell.Tab.1.right" timestamp="1591734009377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="266" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591304390600" />
+    <state width="1877" height="281" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591734009377" />
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591730254977">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591730254977" />
   </component>
 </project>
