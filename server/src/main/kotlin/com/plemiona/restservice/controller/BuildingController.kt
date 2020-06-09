@@ -7,10 +7,7 @@ import com.plemiona.restservice.repos.BuildingRepository
 import com.plemiona.restservice.repos.PlayerRepository
 import com.plemiona.restservice.repos.VillageRepository
 import org.springframework.data.repository.findByIdOrNull
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/building")
@@ -19,7 +16,9 @@ class BuildingController(private val villageRepository: VillageRepository,
                         private val buildingRepository: BuildingRepository) {
 
     @PostMapping("/build")
-    fun buildBuilding(playerid: Long, villageid: Long, buildingType: String): String {
+    fun buildBuilding(@RequestParam(value="playerid") playerid: Long,
+                      @RequestParam(value="villageid") villageid: Long,
+                      @RequestParam(value="buildingType")buildingType: String): String {
         var player = playerRepository.findByIdOrNull(id = playerid)
         return if (player != null) {
             var village = player.village[0]
@@ -36,7 +35,9 @@ class BuildingController(private val villageRepository: VillageRepository,
     }
 
     @PostMapping("/upgrade")
-    fun upgradeBuilding(playerid: Long, villageid: Long, buildingid: Long): String {
+    fun upgradeBuilding(@RequestParam(value="playerid")playerid: Long,
+                        @RequestParam(value="villageid") villageid: Long,
+                        @RequestParam(value="buildingid") buildingid: Long): String {
         var player = playerRepository.findByIdOrNull(id = playerid)
         return if (player != null) {
             var village = player.village[0]
@@ -55,7 +56,8 @@ class BuildingController(private val villageRepository: VillageRepository,
     }
 
     @GetMapping("/")
-    fun getVillageBuildings(playerid: Long, villageid: Long): String {
+    fun getVillageBuildings(@RequestParam(value="playerid") playerid: Long,
+                            @RequestParam(value="villageid") villageid: Long): String {
         var player = playerRepository.findByIdOrNull(id = playerid)
         return if (player != null) {
             var village = player.village[0]

@@ -9,10 +9,7 @@ import com.plemiona.restservice.repos.VillageRepository
 import kotlinx.coroutines.flow.combineTransform
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.ResponseStatus
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import org.springframework.web.server.ResponseStatusException
 
 @RestController
@@ -23,7 +20,8 @@ class ResourceController(private val villageRepository: VillageRepository,
 
 
     @GetMapping("mine/")
-    fun mineResources(playerid: Long, villageid: Long): Int {
+    fun mineResources(@RequestParam(value="playerid") playerid: Long,
+                      @RequestParam(value="villageid") villageid: Long): Int {
         var player = playerRepository.findById(playerid).get()
         var village = villageRepository.findById(villageid).get()
         var mined = 0
@@ -35,7 +33,9 @@ class ResourceController(private val villageRepository: VillageRepository,
     }
 
     @GetMapping("recruit/")
-    fun recruitArmy(playerid: Long, villageid: Long, amount: Int): HttpStatus {
+    fun recruitArmy(@RequestParam(value="playerid") playerid: Long,
+                    @RequestParam(value="villageid") villageid: Long,
+                    @RequestParam(value="amount") amount: Int): HttpStatus {
         var player = playerRepository.findById(playerid).get()
         var village = villageRepository.findById(villageid).get()
         return if (village.resources < amount*50) {
