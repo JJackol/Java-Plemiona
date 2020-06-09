@@ -33,7 +33,9 @@ class VillageController(private val villageRepository: VillageRepository,
                     ?: ResponseStatusException(HttpStatus.NOT_FOUND, "This player has no villages or doesnt exist")
 
     @GetMapping("attack/{id}")
-    fun attackVillage(@PathVariable id: Long, playerid: Long, villageid: Long, armySize: Int): BattleReport {
+    fun attackVillage(@PathVariable id: Long, @RequestParam(value="playerid") playerid: Long,
+                      @RequestParam(value="villageid") villageid: Long,
+                      @RequestParam(value="armySize") armySize: Int): BattleReport {
         var defenderVillage = villageRepository.findById(id).get()
         var attackingVillage = villageRepository.findById(villageid).get()
         var defenderArmy = defenderVillage.soldiers
@@ -58,12 +60,12 @@ class VillageController(private val villageRepository: VillageRepository,
 
     @PostMapping("/{id}")
     @ResponseStatus(HttpStatus.CREATED)
-    fun savePlayerVillage(@PathVariable id: Long, villageName: String): String {
+    fun savePlayerVillage(@PathVariable id: Long, @RequestParam(value="villageName") villageName: String): String {
         val player = playerRepository.findById(id).get()
         return if (player != null)
         {
             var village = Village(name = villageName, player = player)
-            villageRepository.save(village)
+            //villageRepository.save(village)
             val building = Building(village = village)
             buildingRepository.save(building)
             "village created"
