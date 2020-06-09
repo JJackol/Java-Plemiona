@@ -27,9 +27,9 @@ class VillageController(private val villageRepository: VillageRepository,
     fun findOne(@PathVariable id: Long) =
             villageRepository.findByIdOrNull(id) ?: ResponseStatusException(HttpStatus.NOT_FOUND, "This village does not exist")
 
-    @GetMapping("/playerVillages/")
-    fun findPlayerVillages(playerid: Long) =
-            villageRepository.findAll().find { village -> village.player == playerRepository.findByIdOrNull(playerid) }
+    @GetMapping("/playerVillages/{id}")
+    fun findPlayerVillages(@PathVariable id: Long) =
+            villageRepository.findAll().find { village -> village.player == playerRepository.findByIdOrNull(id) }
                     ?: ResponseStatusException(HttpStatus.NOT_FOUND, "This player has no villages or doesnt exist")
 
     @GetMapping("attack/{id}")
