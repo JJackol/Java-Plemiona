@@ -1,4 +1,4 @@
-FROM tomcat:8.0-alpine
+FROM tomcat:jdk11-openjdk
 
-EXPOSE 8081
+EXPOSE 8080
 

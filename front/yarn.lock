@@ -7938,6 +7938,11 @@ vue@^2.6.11:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
+vuetify@^2.2.33:
+  version "2.2.33"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.2.33.tgz#0946ce4c437b27846b500ec5d1e92267e31fbf35"
+  integrity sha512-MvyEISdInPpgehiScXCBDdmPHLliHtNYrjRKmWNKLzW3NGnbm9cMeWRXE48q4QjskRwST6g2HDMzyUgWVuC7wA==
+
 vuex@^3.1.2:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.3.tgz#f2ad73e3fb73691698b38c93f66e58e267947180"

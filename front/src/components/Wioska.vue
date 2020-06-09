@@ -8,6 +8,10 @@
 <script>
 export default {
   name: "Wioska",
-  props: {}
+  props: {},
+  data() {},
+  methods: {
+
+  }
 };
 </script>
