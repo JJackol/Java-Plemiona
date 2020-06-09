@@ -16,7 +16,7 @@ data class Village(
         @JsonBackReference
         var player: Player? = null,
         @OneToMany(mappedBy = "village", cascade = [CascadeType.ALL], fetch = FetchType.EAGER)
-        var buildings: Set<Building> = emptySet(),
+        var buildings: MutableList<Building> = mutableListOf(),
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         var id: Long = 1
 )

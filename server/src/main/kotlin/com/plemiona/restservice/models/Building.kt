@@ -1,5 +1,6 @@
 package com.plemiona.restservice.models
 
+import com.fasterxml.jackson.annotation.JsonBackReference
 import javax.persistence.*
 
 
@@ -30,7 +31,8 @@ enum class BuildingType(val type: String): IQuality {
 @Entity
 @Table(name="building")
 data class Building(
-        @ManyToOne(fetch = FetchType.EAGER)
+        @JsonBackReference
+        @ManyToOne(fetch = FetchType.EAGER, cascade = arrayOf(CascadeType.ALL))
         @JoinColumn(name = "village_id")
         val village: Village? = null,
         val type: BuildingType = BuildingType.Guildhall,
