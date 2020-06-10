@@ -1,13 +1,13 @@
 <template>
   <div class="Wioska">
     <pre v-text="$attrs" />
-    <h1>Gracz: {{ wioska.name }}</h1>
-
+    <h1>Gracz: {{ player.username }}</h1>
+    {{ player }}
     <h2>Wioski:</h2>
     <ul>
-      <li> {{ wioska.resource }}</li>
-      <li>{{ wioska.soldiers }}</li>
-      <li>{{ wioska.points }}</li>
+      <li v-for="item in villages" :key="item.id" @click="view_wioska(item)">
+        {{ item.name }}
+      </li>
     </ul>
   </div>
 </template>
@@ -19,13 +19,21 @@ import { mapGetters } from "vuex";
 export default {
   name: "Player",
   props: {},
-  data() {},
+  data() {
+    return {};
+  },
   computed: {
-    ...mapGetters("player", ["player"])
+    ...mapGetters("player", ["player", "villages"])
   },
   mounted() {
     store.dispatch("player/fetchPlayer");
   },
-  methods: {}
+  methods: {
+    view_wioska(item) {
+      store
+        .dispatch("wioska/fetchWioska", item.id)
+        .then(() => this.$router.push("wioska"));
+    }
+  }
 };
 </script>

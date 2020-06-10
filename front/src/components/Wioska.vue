@@ -6,9 +6,9 @@
     <p>opis</p>
 
     <ul>
-      <li>Zasoby: {{ wioska.resource }}}</li>
-      <li>Wojsko: {{ wioska.soldiers }}}</li>
-      <li>Punkty: {{ wioska.points }}}</li>
+      <li>Zasoby: {{ wioska.resources }}</li>
+      <li>Wojsko: {{ wioska.soldiers }}</li>
+      <li>Punkty: {{ wioska.points }}</li>
     </ul>
   </div>
 </template>

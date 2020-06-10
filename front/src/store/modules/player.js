@@ -4,15 +4,18 @@ const store = {
   namespaced: true,
   state: {
     player: {},
+    villages: []
   },
   getters: {
     player(state) {
       return state.player;
-    }
+    },
+    villages: state => state.villages
   },
   mutations: {
     setPlayer(state, player) {
       state.player = player;
+      state.villages = player.village;
     }
   },
   actions: {
@@ -23,7 +26,7 @@ const store = {
           .get("/api/user/"+id)
           .then(response => {
             commit("setPlayer", response.data);
-            console.log(response);
+            console.log(response.data);
             resolve();
           })
           .catch(e => {
