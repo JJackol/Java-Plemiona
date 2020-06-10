@@ -1,15 +1,52 @@
 <template>
   <div class="Wioska">
-    <pre v-text="$attrs" />
-
     <h1>Wioska: {{ wioska.name }}</h1>
-    <p>opis</p>
+    <p @click="refresh">refresh</p>
 
     <ul>
-      <li>Zasoby: {{ wioska.resources }}</li>
+      <li>
+        Zasoby: {{ wioska.resources }} <button @click="mine">Wydobywaj</button>
+      </li>
       <li>Wojsko: {{ wioska.soldiers }}</li>
       <li>Punkty: {{ wioska.points }}</li>
     </ul>
+
+    <h2>Budynki</h2>
+    <ul>
+      <li v-for="item in wioska.buildings" :key="item.id">
+        <div>
+          {{ item.type }} --- poziom {{ item.level }}
+          <button @click="rozbuduj(item)">rozbuduj</button>
+          <br />
+          Koszt --- {{ item.upgradeCost }}
+        </div>
+      </li>
+      <li>
+        Nowy budynek
+
+        <form>
+          <select v-model="sel">
+            <option v-for="i in typy" :key="i" :value="i">{{ i }}</option>
+          </select>
+          <input value="Dodaj" type="button" @click="nowa" />
+        </form>
+      </li>
+    </ul>
+
+    <h2>Wojsko</h2>
+    <p>W wiosce stacjonuje {{ wioska.soldiers }} żołnierzy</p>
+    <p>
+      <button @click="recruit">Rekrutuj</button>
+      <input
+        width="15px"
+        v-model="amount"
+        type="number"
+        id="amount"
+        name="amount"
+        min="1"
+        max="100"
+      />
+    </p>
   </div>
 </template>
 
@@ -20,13 +57,38 @@ import { mapGetters } from "vuex";
 export default {
   name: "Wioska",
   props: {},
-  data() {return {}},
+  data() {
+    return {
+      typy: ["mill", "forge", "farm", "Guildhall"],
+      sel: "",
+      amount: 0
+    };
+  },
   computed: {
     ...mapGetters("wioska", ["wioska"])
   },
-  mounted() {
-    store.dispatch("wioska/fetchWioska");
-  },
-  methods: {}
+  mounted() {},
+  methods: {
+    rozbuduj(item) {
+      console.log(item);
+      store.dispatch("wioska/upgrade", item);
+    },
+    nowa(item) {
+      console.log(item);
+      console.log(this.sel);
+      store.dispatch("wioska/build", this.sel);
+    },
+    mine(item) {
+      console.log(item);
+      store.dispatch("wioska/mine", this.wioska);
+    },
+    recruit(item) {
+      console.log(item);
+      store.dispatch("wioska/recruit", this.amount);
+    },
+    refresh() {
+      store.dispatch("wioska/fetchWioska", this.wioska.id);
+    }
+  }
 };
 </script>

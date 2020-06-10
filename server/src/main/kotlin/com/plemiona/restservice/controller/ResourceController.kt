@@ -30,6 +30,8 @@ class ResourceController(private val villageRepository: VillageRepository,
             village.resources += 100*building.level
             mined += 100*building.level
         }
+        village.resources += mined;
+        villageRepository.save(village);
         return mined
     }
 

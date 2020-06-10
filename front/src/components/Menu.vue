@@ -2,9 +2,9 @@
   <div id="container">
     <div id="aboveMenu">
       <div id="user">
-        <ul id="usernameAndLogout">
-          <li id="logout"><a @click="wyloguj">WYLOGUJ SIĘ</a></li>
-        </ul>
+<!--        <ul id="usernameAndLogout">-->
+<!--          <li id="logout"><a @click="wyloguj">WYLOGUJ SIĘ</a></li>-->
+<!--        </ul>-->
       </div>
     </div>
 
@@ -15,6 +15,7 @@
         <li>
           <a>&nbsp;Reporty</a>
         </li>
+        <li><a @click="wyloguj">WYLOGUJ SIĘ</a></li>
       </ol>
     </div>
   </div>
@@ -49,7 +50,7 @@ body {
   padding: 0;
 }
 .nav {
-  background-color: #a91225;
+  background-color: #001005;
   text-align: center;
   margin: 0;
   width: 100%;
@@ -90,7 +91,7 @@ ol > li {
   //margin-right: 3%;
 }
 ol > li:hover {
-  background-color: #ba2336;
+  background-color: #1a2336;
   height: 100%;
 }
 ol > li:hover > ul {
@@ -104,7 +105,7 @@ ol > li > ul {
   display: none;
 }
 ol > li > ul > li {
-  background-color: #ba2336;
+  background-color: #0a8836;
   position: relative;
   z-index: 100;
   border-top: 1px solid #fff;
