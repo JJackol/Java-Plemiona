@@ -32,7 +32,7 @@ class VillageController(private val villageRepository: VillageRepository,
             villageRepository.findAll().filter { village -> village.player == playerRepository.findByIdOrNull(id) }
                     ?: ResponseStatusException(HttpStatus.NOT_FOUND, "This player has no villages or doesnt exist")
 
-    @GetMapping("attack/{id}")
+    @PostMapping("attack/{id}")
     fun attackVillage(@PathVariable id: Long, @RequestParam(value="playerid") playerid: Long,
                       @RequestParam(value="villageid") villageid: Long,
                       @RequestParam(value="armySize") armySize: Int): BattleReport {
@@ -46,18 +46,29 @@ class VillageController(private val villageRepository: VillageRepository,
             defenderVillage.soldiers -= armySize
             attackingVillage.soldiers -= armySize
         }
-        villageRepository.save(defenderVillage)
-        villageRepository.save(attackingVillage)
-        val battleReport = BattleReport(defenderVillage = defenderVillage,
-                                        attackingVillage = attackingVillage,
+        val battleReport = BattleReport(defenderVillageid = defenderVillage.id,
+                                        attackingVillageid = attackingVillage.id,
+                                        attackerid = attackingVillage.player?.id!!,
+                                        defenderid = defenderVillage.player?.id!!,
                                         attackerArmy = armySize,
                                         defenderArmy = defenderArmy,
                                         attackerLoses = armySize - defenderArmy,
                                         defenderLoses = defenderArmy - armySize)
+        //villageRepository.save(defenderVillage)
+        //villageRepository.save(attackingVillage)
         battleReportRepository.save(battleReport)
-
         return battleReport
     }
+
+    @GetMapping("/playerBattleReports/{id}")
+    fun findPlayerBattleReports(@PathVariable id: Long) =
+            battleReportRepository.findAll().filter {
+                battleReport -> battleReport.attackerid == id ||
+                    battleReport.defenderid == id}
+                    ?: ResponseStatusException(HttpStatus.NOT_FOUND, "This player has no villages or doesnt exist")
+
+    @GetMapping("/playerBattleReports")
+    fun findAllBattleReports() = battleReportRepository.findAll()
 
 
     @PostMapping("/{id}")
