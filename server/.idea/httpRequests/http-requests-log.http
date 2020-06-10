@@ -1,3 +1,91 @@
+POST http://localhost:8080/api/user/login
+
+<> 2020-06-10T010732.400.json
+
+###
+
+POST http://localhost:8080/api/user/register
+
+<> 2020-06-10T010308.400.json
+
+###
+
+POST http://localhost:8080/api/building/build
+
+<> 2020-06-10T010127.400.json
+
+###
+
+POST http://localhost:8080/api/user/login
+
+<> 2020-06-10T010026.400.json
+
+###
+
+POST http://localhost:8080/api/user/register
+
+<> 2020-06-10T125802.400.json
+
+###
+
+GET http://localhost:8080/api/village/playerBattleReports
+
+<> 2020-06-10T125724.200.json
+
+###
+
+GET http://localhost:8080/api/village/playerBattleReports
+
+<> 2020-06-10T122645.200.json
+
+###
+
+GET http://localhost:8080/api/village/{id}
+
+###
+
+POST http://localhost:8080/api/user/login
+
+<> 2020-06-10T122621.400.json
+
+###
+
+POST http://localhost:8080/api/user/login
+
+<> 2020-06-10T122531.400.json
+
+###
+
+GET http://localhost:8080/api/building/
+
+<> 2020-06-10T122517.400.json
+
+###
+
+POST http://localhost:8080/api/user/register
+
+<> 2020-06-10T122458.400.json
+
+###
+
+POST http://localhost:8080/api/building/build
+
+<> 2020-06-10T122440.400.json
+
+###
+
+GET http://localhost:8080/api/building/
+
+<> 2020-06-10T122430.400.json
+
+###
+
+GET http://localhost:8080/api/building/
+
+<> 2020-06-10T122350.400.json
+
+###
+
 GET http://localhost:8080/resources/mine/
 
 <> 2020-06-10T095352.405.json

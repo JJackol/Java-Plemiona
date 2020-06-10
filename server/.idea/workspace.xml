@@ -26,6 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0444535-a31d-4ada-857a-4aa469891e05" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/PlayerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/plemiona/restservice/controller/PlayerController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
@@ -74,6 +75,41 @@
     <option name="REQUEST_HISTORY">
       <list>
         <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/user/login" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/user/register" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/building/build" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/village/playerBattleReports" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/building/" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8080/resources/mine/" />
           <option name="urlPath" value="" />
@@ -94,30 +130,23 @@
           <option name="textToSend" value="" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080/api/building/" />
-          <option name="urlPath" value="" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.RestServiceApplication">
-    <configuration name="RestServiceApplication#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" runType="Run single request">
+    <configuration name="RestServiceApplication#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="RestServiceApplication#13" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="13" runType="Run single request">
+    <configuration name="RestServiceApplication#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="RestServiceApplication#14" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="14" runType="Run single request">
+    <configuration name="RestServiceApplication#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="4" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="RestServiceApplication#16" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="16" runType="Run single request">
+    <configuration name="RestServiceApplication#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="5" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="RestServiceApplication#7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="7" runType="Run single request">
+    <configuration name="RestServiceApplication#6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/RestServiceApplication.http" index="6" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="RestServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -129,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.RestServiceApplication#14" />
-        <item itemvalue="HTTP Request.RestServiceApplication#1" />
-        <item itemvalue="HTTP Request.RestServiceApplication#7" />
-        <item itemvalue="HTTP Request.RestServiceApplication#16" />
-        <item itemvalue="HTTP Request.RestServiceApplication#13" />
+        <item itemvalue="HTTP Request.RestServiceApplication#4" />
+        <item itemvalue="HTTP Request.RestServiceApplication#3" />
+        <item itemvalue="HTTP Request.RestServiceApplication#2" />
+        <item itemvalue="HTTP Request.RestServiceApplication#6" />
+        <item itemvalue="HTTP Request.RestServiceApplication#5" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +196,7 @@
       <workItem from="1591739665569" duration="297000" />
       <workItem from="1591747938417" duration="1388000" />
       <workItem from="1591775105127" duration="1019000" />
-      <workItem from="1591776147107" duration="5412000" />
+      <workItem from="1591776147107" duration="8832000" />
     </task>
     <servers />
   </component>
@@ -191,54 +220,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591775042316" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1591776497892">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1591787252123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497892" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1591776497891">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591787252123" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1591787252123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497891" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1591776497891">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591787252123" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1591787252123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497891" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1591776497891">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591787252123" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1591787252123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497891" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1591776497892">
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591787252123" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1591787252123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497892" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1591776497892">
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591787252123" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1591787252123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497892" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1591776497892">
+    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591787252123" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1591787252123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497892" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1591776497892">
+    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591787252123" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1591787252123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497892" />
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1591776497893">
+    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591787252123" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1591784539369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497893" />
-    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1591776497892">
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591784539369" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1591784539369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497892" />
-    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1591776497892">
+    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591784539369" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1591784539368">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497892" />
-    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1591776497893">
+    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591784539368" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1591784539369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591776497893" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591784539369" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1591776350511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

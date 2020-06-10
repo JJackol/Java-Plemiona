@@ -42,8 +42,8 @@ class PlayerController(private val playerRepository: PlayerRepository) {
 
     @PostMapping("/login")
     @ResponseStatus(HttpStatus.OK)
-    fun loginUser (@RequestBody username: String,
-                   @RequestBody password: String) : Boolean {
+    fun loginUser (@RequestParam(value="username") username: String,
+                   @RequestParam(value = "password") password: String) : Boolean {
         var user = playerRepository.findByUsername(username)
         if (user != null){
             if (BCryptPasswordEncoder().matches(password, user.passwordHash)){
