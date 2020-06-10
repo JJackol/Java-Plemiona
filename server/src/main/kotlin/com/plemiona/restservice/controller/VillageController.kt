@@ -12,7 +12,7 @@ import org.springframework.data.repository.findByIdOrNull
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.server.ResponseStatusException
-
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/api/village")
 class VillageController(private val villageRepository: VillageRepository,

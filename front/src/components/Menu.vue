@@ -10,10 +10,10 @@
 
     <div class="nav">
       <ol>
-        <li><a href="/home">Strona główna</a></li>
+        <li><a href="/player">Gracz</a></li>
         <li><a href="/wioska">Wioska</a></li>
         <li>
-          <a>&nbsp;Grupy</a>
+          <a>&nbsp;Reporty</a>
         </li>
       </ol>
     </div>

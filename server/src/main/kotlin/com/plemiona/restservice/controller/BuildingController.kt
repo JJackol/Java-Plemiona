@@ -9,6 +9,7 @@ import com.plemiona.restservice.repos.VillageRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/api/building")
 class BuildingController(private val villageRepository: VillageRepository,

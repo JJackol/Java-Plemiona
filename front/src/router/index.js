@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Layout from "../views/Layout.vue";
 import WioskaView from "../views/WioskaView.vue";
 import LoginView from "../views/LoginView.vue";
+import PlayerView from "../views/PlayerView";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
         path: "/wioska",
         name: "Wioska",
         component: WioskaView
+      },
+      {
+        path: "/player",
+        name: "PlayerView",
+        component: PlayerView
       }
     ]
   }

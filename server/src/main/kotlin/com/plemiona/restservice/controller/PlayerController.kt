@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.server.ResponseStatusException
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/api/user")
 class PlayerController(private val repository: PlayerRepository) {

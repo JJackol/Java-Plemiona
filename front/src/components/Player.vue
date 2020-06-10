@@ -1,14 +1,13 @@
 <template>
   <div class="Wioska">
     <pre v-text="$attrs" />
+    <h1>Gracz: {{ wioska.name }}</h1>
 
-    <h1>Wioska: {{ wioska.name }}</h1>
-    <p>opis</p>
-
+    <h2>Wioski:</h2>
     <ul>
-      <li>Zasoby: {{ wioska.resource }}}</li>
-      <li>Wojsko: {{ wioska.soldiers }}}</li>
-      <li>Punkty: {{ wioska.points }}}</li>
+      <li> {{ wioska.resource }}</li>
+      <li>{{ wioska.soldiers }}</li>
+      <li>{{ wioska.points }}</li>
     </ul>
   </div>
 </template>
@@ -18,14 +17,14 @@
 import store from "../store";
 import { mapGetters } from "vuex";
 export default {
-  name: "Wioska",
+  name: "Player",
   props: {},
-  data() {return {}},
+  data() {},
   computed: {
-    ...mapGetters("wioska", ["wioska"])
+    ...mapGetters("player", ["player"])
   },
   mounted() {
-    store.dispatch("wioska/fetchWioska");
+    store.dispatch("player/fetchPlayer");
   },
   methods: {}
 };
