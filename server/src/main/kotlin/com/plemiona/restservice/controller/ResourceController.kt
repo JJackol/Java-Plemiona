@@ -19,20 +19,20 @@ class ResourceController(private val villageRepository: VillageRepository,
                          private val buildingRepository: BuildingRepository)  {
 
 
-    @GetMapping("mine/")
+    @PostMapping("mine/")
     fun mineResources(@RequestParam(value="playerid") playerid: Long,
                       @RequestParam(value="villageid") villageid: Long): Int {
-        var player = playerRepository.findById(playerid).get()
         var village = villageRepository.findById(villageid).get()
         var mined = 0
         for (building in village.buildings) {
             village.resources += 100*building.level
             mined += 100*building.level
+            villageRepository.save(village)
         }
         return mined
     }
 
-    @GetMapping("recruit/")
+    @PostMapping("recruit/")
     fun recruitArmy(@RequestParam(value="playerid") playerid: Long,
                     @RequestParam(value="villageid") villageid: Long,
                     @RequestParam(value="amount") amount: Int): HttpStatus {
@@ -43,6 +43,7 @@ class ResourceController(private val villageRepository: VillageRepository,
         } else {
             village.resources -= amount*50
             village.soldiers += amount
+            villageRepository.save(village)
             HttpStatus.ACCEPTED
         }
     }

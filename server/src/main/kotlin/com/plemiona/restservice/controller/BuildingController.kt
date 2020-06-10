@@ -49,6 +49,7 @@ class BuildingController(private val villageRepository: VillageRepository,
                     "not enough resources"
                 }
             }
+            villageRepository.save(village)
             "upgraded"
         } else {
             "not found"

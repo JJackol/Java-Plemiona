@@ -12,6 +12,18 @@ import org.springframework.web.server.ResponseStatusException
 @RequestMapping("/api/user")
 class PlayerController(private val playerRepository: PlayerRepository) {
 
+    @GetMapping("/")
+    fun findAll() = playerRepository.findAll()
+
+    @GetMapping("/{id}")
+    fun findOne(@PathVariable id: Long) =
+            playerRepository.findByIdOrNull(id) ?: ResponseStatusException(HttpStatus.NOT_FOUND, "This user does not exist")
+
+    @DeleteMapping("/{id}")
+    fun deleteOne(@PathVariable id: Long) =
+            playerRepository.deleteById(id) ?: ResponseStatusException(HttpStatus.NOT_FOUND, "This user does not exist")
+
+
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
     fun registerUser (@RequestParam(value="username") username: String,
