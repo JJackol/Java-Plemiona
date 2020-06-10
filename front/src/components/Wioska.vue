@@ -1,7 +1,7 @@
 <template>
   <div class="Wioska">
     <h1>Wioska: {{ wioska.name }}</h1>
-    <p @click="refresh">refresh</p>
+    <button @click="refresh">refresh</button>
 
     <ul>
       <li>
@@ -50,6 +50,31 @@
         max="100"
       />
     </p>
+    <hr/>
+
+    <div>
+      <select v-model="cel">
+        <option v-for="item in wioski" :key="item.id" :value="item.id">{{ item.name }}</option>
+      </select>
+
+      <button @click="attack">Atakuj</button>
+
+      <input
+        width="15px"
+        v-model="armySize"
+        type="number"
+        name="amount"
+        min="1"
+        max="100"
+      />
+    </div>
+
+  <h2>Wojna</h2>
+    <p>Raport z bitwy {{ wynik }} </p>
+    <p>
+
+    </p>
+    <hr/>
   </div>
 </template>
 
@@ -64,13 +89,16 @@ export default {
     return {
       typy: ["mill", "forge", "farm", "Guildhall"],
       sel: "",
+      cel: -1,
       amount: 0
     };
   },
   computed: {
-    ...mapGetters("wioska", ["wioska"])
+    ...mapGetters("wioska", ["wioska", "wioski", "wynik"])
   },
-  mounted() {},
+  mounted() {
+    store.dispatch("wioska/fetchWioski").then(()=>console.log(this.wioski));
+  },
   methods: {
     rozbuduj(item) {
       console.log(item);
@@ -89,12 +117,24 @@ export default {
       console.log(item);
       store
         .dispatch("wioska/mine", this.wioska)
-        .then(store.dispatch("wioska/fetchWioska", this.wioska.id));
+        .then(
+          setTimeout(store.dispatch("wioska/fetchWioska", this.wioska.id), 500)
+        );
     },
     recruit(item) {
       console.log(item);
       store
         .dispatch("wioska/recruit", this.amount)
+        .then(store.dispatch("wioska/fetchWioska", this.wioska.id));
+    },
+    attack() {
+      console.log(this.cel);
+      let payload = {
+        defid: this.cel,
+        armySize: this.armySize
+      }
+      store
+        .dispatch("wioska/attack", payload)
         .then(store.dispatch("wioska/fetchWioska", this.wioska.id));
     },
     refresh() {

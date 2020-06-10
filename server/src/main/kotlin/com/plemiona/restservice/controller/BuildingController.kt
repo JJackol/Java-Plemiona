@@ -21,8 +21,8 @@ class BuildingController(private val villageRepository: VillageRepository,
                       @RequestParam(value="villageid") villageid: Long,
                       @RequestParam(value="buildingType")buildingType: String): String {
         var player = playerRepository.findByIdOrNull(id = playerid)
-        return if (player != null) {
-            var village = player.village[0]
+        var village = villageRepository.findByIdOrNull(id = villageid)
+        return if (player != null && village!=null) {
             var building = Building(village = village, type = BuildingType.from(buildingType))
             return if (village.resources > building.upgradeCost) {
                 buildingRepository.save(building)

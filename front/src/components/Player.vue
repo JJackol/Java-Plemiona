@@ -4,7 +4,7 @@
     <h2>Wioski:</h2>
     <ul>
       <li v-for="item in villages" :key="item.id" @click="view_wioska(item)">
-        {{ item.name }}
+        {{ item.name }} {{item.id}}
       </li>
     </ul>
     <div>
@@ -44,7 +44,7 @@ export default {
       if (this.nowa_nazwa) {
         store
           .dispatch("wioska/nowaWioska", { new_name: this.nowa_nazwa })
-          .then(() => store.dispatch("player/fetchPlayer"));
+          .then(() => setTimeout(store.dispatch("player/fetchPlayer"),500));
       }
     }
   }
