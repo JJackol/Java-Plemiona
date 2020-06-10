@@ -2,7 +2,7 @@
   <div class="Wioska">
     <h1>Raporty</h1>
     <ul>
-      <li v-for="item in reporty" :key="item.id" @click="view_wioska(item)">
+      <li v-for="item in reports" :key="item.id">
         {{ item.name }} {{item.id}}
         {{item}}
       </li>

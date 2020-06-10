@@ -5,6 +5,10 @@
       <input v-model="login" type="text" />
     </row>
     <row>
+      <h3>E-mail</h3>
+      <input v-model="email" type="email" />
+    </row>
+    <row>
       <h3>Hasło</h3>
       <input v-model="password" type="password" />
     </row>
@@ -12,13 +16,7 @@
     <row>
       <button @click="validate">Zaloguj</button>
     </row>
-    <hr/>
-    <div>
-
-  <a href="/register">Nowy uzytkownik</a>
   </div>
-  </div>
-
 </template>
 
 <script>
@@ -32,6 +30,7 @@ export default {
       show1: false,
       password: "",
       login: "",
+      email: "",
       rules: {
         required: value => !!value || "Wymagane.",
         min: v => v.length >= 8 || "Minimum 8 znaków"
@@ -46,13 +45,15 @@ export default {
     validate() {
       const username = this.login;
       const password = this.password;
+      const email = this.email;
       const payload = {
         username: username,
+        email: email,
         password: password
       };
       if (payload.username !== "" && payload.password !== "") {
         store
-          .dispatch("context/login", payload)
+          .dispatch("context/register", payload)
           .then(() => alert("logged"))
           .catch(e => {
             alert(e);
