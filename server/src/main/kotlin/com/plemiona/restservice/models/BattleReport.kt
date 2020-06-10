@@ -5,12 +5,10 @@ import javax.persistence.*
 @Entity
 @Table(name="battlereport")
 data class BattleReport (
-        @ManyToOne(fetch = FetchType.EAGER)
-        @JoinColumn(name = "village_id", referencedColumnName = "id", insertable =  false, updatable = false)
-        val defenderVillage: Village? = null,
-        @ManyToOne(fetch = FetchType.EAGER)
-        @JoinColumn(name = "village_id", referencedColumnName = "id", insertable =  false, updatable = false)
-        val attackingVillage: Village? = null,
+        val defenderVillageid: Long = 0,
+        val attackingVillageid: Long = 0,
+        val defenderid: Long = 0,
+        val attackerid: Long = 0,
         val attackerArmy: Int = 0,
         val defenderArmy: Int = 0,
         val attackerLoses: Int = 0,
