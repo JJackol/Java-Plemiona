@@ -46,6 +46,7 @@ class BuildingController(private val villageRepository: VillageRepository,
             if (building != null) {
                 if (village.resources < building.upgradeCost){
                         upgradeBuilding(village, building)
+                        buildingRepository.save(building)
                 } else {
                     "not enough resources"
                 }
@@ -72,6 +73,8 @@ class BuildingController(private val villageRepository: VillageRepository,
     fun upgradeBuilding(village: Village, building: Building): Boolean {
         return if (building.upgradeCost > village.resources) {
             building.level += 1
+            buildingRepository.save(building)
+            villageRepository.save(village)
             true
         } else false
     }

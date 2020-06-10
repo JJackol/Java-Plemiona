@@ -2,8 +2,9 @@
   <div class="Wioska">
     <h1>Raporty</h1>
     <ul>
-      <li v-for="item in villages" :key="item.id" @click="view_wioska(item)">
+      <li v-for="item in reporty" :key="item.id" @click="view_wioska(item)">
         {{ item.name }} {{item.id}}
+        {{item}}
       </li>
     </ul>
   </div>
@@ -17,13 +18,13 @@ export default {
   name: "Player",
   props: {},
   data() {
-    return { nowa_nazwa: "" };
+    return {  };
   },
   computed: {
-    ...mapGetters("player", ["player", "villages"])
+    ...mapGetters("reports", ["reports"])
   },
   mounted() {
-    store.dispatch("player/fetchPlayer");
+    store.dispatch("reports/fetchReports");
   },
   methods: {
     view_wioska(item) {

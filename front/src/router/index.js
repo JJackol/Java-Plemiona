@@ -5,6 +5,7 @@ import Layout from "../views/Layout.vue";
 import WioskaView from "../views/WioskaView.vue";
 import LoginView from "../views/LoginView.vue";
 import PlayerView from "../views/PlayerView";
+import ReportsView from "../views/ReportsView";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routes = [
         path: "/wioska",
         name: "Wioska",
         component: WioskaView
+      },
+      {
+        path: "/reports",
+        name: "Raporty",
+        component: ReportsView
       },
       {
         path: "/player",

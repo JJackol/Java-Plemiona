@@ -31,6 +31,7 @@ const store = {
         axios
           .post("/api/login/", { ...payload })
           .then(response => {
+            console.log(response);
             if (response.status === 200) {
               localStorage.setItem("authorization_token", response.data.token);
               commit("setAuthorizationToken", response.data);

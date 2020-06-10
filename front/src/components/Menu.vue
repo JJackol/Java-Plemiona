@@ -2,9 +2,9 @@
   <div id="container">
     <div id="aboveMenu">
       <div id="user">
-<!--        <ul id="usernameAndLogout">-->
-<!--          <li id="logout"><a @click="wyloguj">WYLOGUJ SIĘ</a></li>-->
-<!--        </ul>-->
+        <!--        <ul id="usernameAndLogout">-->
+        <!--          <li id="logout"><a @click="wyloguj">WYLOGUJ SIĘ</a></li>-->
+        <!--        </ul>-->
       </div>
     </div>
 
@@ -13,7 +13,7 @@
         <li><a href="/player">Gracz</a></li>
         <li><a href="/wioska">Wioska</a></li>
         <li>
-          <a>&nbsp;Reporty</a>
+          <a href="/reports">&nbsp;Reporty</a>
         </li>
         <li><a @click="wyloguj">WYLOGUJ SIĘ</a></li>
       </ol>

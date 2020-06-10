@@ -1,20 +1,17 @@
 <template>
   <div id="container">
-    <form>
-      <row>
-        <h3>Login</h3>
-        <input v-model="login" type="text" />
-      </row>
-      <row>
-        <h3>Hasło</h3>
-        <input v-model="password" type="password" />
-      </row>
-      <br/>
-      <row>
-        <button @click="validate">Zaloguj</button>
-      </row>
-
-    </form>
+    <row>
+      <h3>Login</h3>
+      <input v-model="login" type="text" />
+    </row>
+    <row>
+      <h3>Hasło</h3>
+      <input v-model="password" type="password" />
+    </row>
+    <br />
+    <row>
+      <button @click="validate">Zaloguj</button>
+    </row>
   </div>
 </template>
 
