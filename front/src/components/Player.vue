@@ -1,8 +1,6 @@
 <template>
   <div class="Wioska">
-    <pre v-text="$attrs" />
     <h1>Gracz: {{ player.username }}</h1>
-    {{ player }}
     <h2>Wioski:</h2>
     <ul>
       <li v-for="item in villages" :key="item.id" @click="view_wioska(item)">
@@ -16,6 +14,7 @@
         <input value="dodaj" type="button" @click="nowa" />
       </form>
     </div>
+    {{ player }}
   </div>
 </template>
 

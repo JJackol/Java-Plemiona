@@ -5,7 +5,8 @@
 
     <ul>
       <li>
-        Zasoby: {{ wioska.resources }} <button @click="mine">Wydobywaj</button>
+        Zasoby: {{ wioska.resources }} <span :text="wioska.resources"></span>
+        <button @click="mine">Wydobywaj</button>
       </li>
       <li>Wojsko: {{ wioska.soldiers }}</li>
       <li>Punkty: {{ wioska.points }}</li>
@@ -15,10 +16,12 @@
     <ul>
       <li v-for="item in wioska.buildings" :key="item.id">
         <div>
+          <hr />
           {{ item.type }} --- poziom {{ item.level }}
           <button @click="rozbuduj(item)">rozbuduj</button>
           <br />
           Koszt --- {{ item.upgradeCost }}
+          <hr />
         </div>
       </li>
       <li>
@@ -71,20 +74,28 @@ export default {
   methods: {
     rozbuduj(item) {
       console.log(item);
-      store.dispatch("wioska/upgrade", item);
+      store
+        .dispatch("wioska/upgrade", item)
+        .then(store.dispatch("wioska/fetchWioska", this.wioska.id));
     },
     nowa(item) {
       console.log(item);
       console.log(this.sel);
-      store.dispatch("wioska/build", this.sel);
+      store
+        .dispatch("wioska/build", this.sel)
+        .then(store.dispatch("wioska/fetchWioska", this.wioska.id));
     },
     mine(item) {
       console.log(item);
-      store.dispatch("wioska/mine", this.wioska);
+      store
+        .dispatch("wioska/mine", this.wioska)
+        .then(store.dispatch("wioska/fetchWioska", this.wioska.id));
     },
     recruit(item) {
       console.log(item);
-      store.dispatch("wioska/recruit", this.amount);
+      store
+        .dispatch("wioska/recruit", this.amount)
+        .then(store.dispatch("wioska/fetchWioska", this.wioska.id));
     },
     refresh() {
       store.dispatch("wioska/fetchWioska", this.wioska.id);
